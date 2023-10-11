@@ -44,7 +44,7 @@ Auxiliam no mecanismo de busca, é um pequeno resumo da pasta: author, descripti
  isso significa que não será passado nenhum parâmetro pela URL, isso permite um maior controle quando estamos tratando dados sensíveis (ex. dados dos cartões de crédito, senhas, etc).
  -->
 
-<form method="post" action "cadastro_aluno.php">
+<form method="post" action=" ">
 
 <!-- &nbsp; "Non-breaking space" - Espaço sem quebra -->
 
