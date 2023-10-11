@@ -1,6 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-/* Asterisco = seletor universal, representa todos 
+﻿/* Asterisco = seletor universal, representa todos 
 os elementos serão afetados */
 
 
@@ -24,7 +22,7 @@ margin: valor1 valor2 valor3 valor4 - margens superior, direita, inferior e esqu
 
 body{
 
-
+/*Define a cor de fundo para o corpo da página*/
 
   background: #F8EFBA;
   
@@ -34,23 +32,26 @@ body{
 }
 
 #banner	 {
-/*   width  = largura       height = altura */     
 
-    width: 100%;
-	height: 400px;
-	margin-bottom: 30px;
-	border-radius: 12px; 
+  width:100%; /*Largura*/
+  height:"auto"; /*Altura*/
+  margin-bottom: 30px; /* Define / Adiciona uma margem inferior de 30 pixels ao elemento "banner".
+  coloca valor mais longe de outros elementos visinhos, enquanto um valor negativo, aproxima.
+  */
+  border-radius: 12px; /*Definir bordas arredondadas*/
 	
     }
 
 
  h1 {
-        background: green;
-		text-align: center;
-		color: #ffffff;
-		width: 100%;
+        background: green; /* Define a cor de fundo para os cabeçalhos h1 */
+        text-align: center; /* Centraliza o texto dentro do cabeçalho h1 */
+        color: #ffffff; /* Define a cor do texto dentro do cabeçalho h1 como branco */
+        width:100% /*Lagura total*/
 		
  }
+ 
+ 
  
 /*   
 p {
@@ -74,74 +75,95 @@ p {
 	 
  } 
 
-#nota{
-     font-family: Courier;
-	 color: red;
-     font-size: 22px;
-	 
- } 
- 
- #conselho{
-	 
-	 font-family: Courier;
-     color: blue;
-     font-size: 20px;
+/* Define o estilo para os elementos com o ID "nota", ID frequencia e ID conselho*/
+#nota, #frequencia, #conselho {
+  font-family: Courier;	
+  font-size: 17px; /* Define o tamanho da fonte como 20 pixels para o elemento "nota" */
+  color: red; /*cor do texto em vermelho*/
+   
+}		   
 	
- } 
  
+ /*Abaixo códigos para estilação dos menus / submenus */
  
-/*Abaixo CSS do menu horizontal */
-
-
-
+/* Define a estilização para o menu principal */
 ul.menu {
-	
-	
-	/* 
-	max-width: largura máxima.
-	
-	padding: preenchimento. Distância entre o elemento e as bodas da página.
-	define espaçamento ao redor de um elemento,
-  */
-  
-    background-color: rgb(37, 37, 39);
-	width:100%;
-	height:40px;
-	font-family: times new roman;
+    background-color: black; /* Define a cor de fundo do menu principal */
+    display: flex; /* Exibe os itens do menu lado a lado */
+	font-family: Arial;
     font-size: 20px;
-	padding: 0;
-	   
-	  
-}
-
-ul.menu li {
-	/* display: inline - exibir em linha 
-	  quando queremos que os elementos fiquem posicionados lado a lado.
-	  display: block - o elementos ficam posicionados um em baixo do outro,
-	*/
-    display: inline-block;
-
-}
-
-ul.menu li a {
-	/*text-decoration - Define (nesse caso tira o underline de link  */
-	
+    list-style: none; /* Remove os marcadores de lista */
+    padding: 10; /* Espalamento 10. Colocando 0 (zero) Remove o espaçamento interno */
+	width: 100%;
     
-	color: #FFF;
-    padding: 0px;
-    display: inline-block;
-    text-decoration: none;
+    
+}
 
+/* Estilização para os itens do menu principal */
+ul.menu li.menu-item {
+    position: relative; /* Permite posicionar os submenus corretamente */
+    margin-right: 20px; /* Define o espaçamento entre os itens do menu */
+}
 
+/* Estilização para os links dos itens do menu principal */
+ul.menu li a {
+    color: white; /* Define a cor do texto do menu principal */
+    padding: 10px; /* Adiciona um preenchimento uniforme interno de 10 pixels ao elemento "nota" em todas as bordas
+  Controlar o espaçamento interno de um elemento HTML em relação às suas bordas. 
+  
+PROPRIEDADE padding  
+Podemos definir o padding separadamente para cada borda usando 
+valores individuais ou abreviados  
+padding-top: 10px;      Espaçamento na borda superior 
+padding-right: 20px;    Espaçamento na borda direita 
+padding-bottom: 15px;   Espaçamento na borda inferior 
+padding-left: 30px;     Espaçamento na borda esquerda 
+*/	
+    text-decoration: none; /* Remove a decoração de texto */
+    display: block; /* Faz com que o link ocupe a largura total do item do menu */
+}
+
+/* Define o estilo dos submenus e oculta-os inicialmente */
+ul.menu li .submenu {
+    display: none; /* Esconde os submenus por padrão */
+    position: absolute; /* Permite posicionar os submenus de forma absoluta */
+    background-color: black; /* Define a cor de fundo dos submenus */
+    width: 200px; /* Define a largura dos submenus */
+    padding: 10px; /* Define o espaçamento interno dos submenus */
+    list-style: none; /* Remove os marcadores de lista */
+    top: 90%; /* Posiciona o submenu abaixo do item do menu principal */
+    left: 0; /* Alinha o submenu com o lado esquerdo do item do menu principal */
+    z-index: 2; /* Define a ordem de empilhamento, acima do conteúdo */
+}
+
+/* Mostra o submenu quando o item do menu principal é hoverado */
+ul.menu li.menu-item:hover > .submenu {
+    display: block; /* Exibe o submenu ao passar o mouse no item do menu principal */
+}
+
+/* Estilização para os itens dentro dos submenus */
+ul.submenu li {
+    display: block; /* Exibe os itens dos submenus como blocos */
+}
+
+/* Estilização para os links dentro dos submenus */
+ul.submenu li a {
+    color: #FFF; /* Define a cor do texto dos submenus */
+    text-decoration: none; /* Remove a decoração de texto */
 }
 
 ul.menu li a:hover {
 	
-	/*hover - flutuar - cor azul. 
-	
-	RGB - Sistema de Cores: Red, Green e Blue (variações).
-	*/
-	
+		
     background-color: rgb(24, 139, 233);
 }
 
+/* Adicione margens à tabela */
+        table {
+            margin: 20px;
+            border-collapse: collapse; /* Mescla as bordas da tabela */
+        }
+        th, td {
+            border: 1px solid black; /* Adicione bordas às células */
+            padding: 5px; /* Adicione espaço interno às células */
+        }
