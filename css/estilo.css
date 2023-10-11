@@ -1,4 +1,4 @@
-﻿/* Asterisco = seletor universal, representa todos 
+/* Asterisco = seletor universal, representa todos 
 os elementos serão afetados */
 
 
@@ -167,3 +167,4 @@ ul.menu li a:hover {
             border: 1px solid black; /* Adicione bordas às células */
             padding: 5px; /* Adicione espaço interno às células */
         }
+
