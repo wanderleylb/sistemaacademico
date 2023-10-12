@@ -17,9 +17,11 @@ uma equipe em tempo integral e o público trabalham juntos para desenvolver padr
 por outros elementos HTML.
 Auxiliam no mecanismo de busca, é um pequeno resumo da pasta: author, description e outras informações>	  -->
 	  
-	           <meta name="author" content="Wanderley Lopes Batista">    
-               <meta charset="UTF-8">
-	           <title>Cadastro de Aluno</title>
+	         <meta name="author" content="Wanderley Lopes Batista">
+                <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	        
+           <title>Cadastro de Aluno</title>
 
 <!-- HREF - Hypertext Reference -->
 
